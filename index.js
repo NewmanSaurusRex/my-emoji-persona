@@ -21,3 +21,13 @@ pushBtn.addEventListener("click", function () {
     renderEmojis();
   }
 });
+
+const unshiftBtn = document.getElementById("unshift-btn");
+unshiftBtn.addEventListener("click", function () {
+  const emojiInput = document.getElementById("emoji-input");
+  if (emojiInput.value) {
+    myEmojis.unshift(emojiInput.value);
+    emojiInput.value = "";
+    renderEmojis();
+  }
+});
