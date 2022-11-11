@@ -11,3 +11,13 @@ function renderEmojis() {
 }
 
 renderEmojis();
+
+const pushBtn = document.getElementById("push-btn");
+pushBtn.addEventListener("click", function () {
+  const emojiInput = document.getElementById("emoji-input");
+  if (emojiInput.value) {
+    myEmojis.push(emojiInput.value);
+    emojiInput.value = "";
+    renderEmojis();
+  }
+});
